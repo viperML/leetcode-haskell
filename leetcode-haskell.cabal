@@ -1,4 +1,4 @@
-cabal-version:      3.14
+cabal-version:      3.4
 -- The cabal-version field refers to the version of the .cabal specification,
 -- and can be different from the cabal-install (the tool) version and the
 -- Cabal (the library) version you are using. As such, the Cabal (the library)
@@ -29,7 +29,7 @@ version:            0.1.0.0
 -- description:
 
 -- The license under which the package is released.
-license:            NONE
+license:            EUPL-1.2
 
 -- The package author(s).
 author:             Fernando Ayats
@@ -58,13 +58,19 @@ executable leetcode-haskell
     main-is:          Main.hs
 
     -- Modules included in this executable, other than Main.
-    -- other-modules:
+    other-modules: Prob1
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
+    default-extensions:
+        , OverloadedStrings
+        , ScopedTypeVariables
+        , LambdaCase
 
     -- Other library packages from which modules are imported.
-    build-depends:    base
+    build-depends:
+        , base
+        , optparse-applicative
 
     -- Directories containing source files.
     hs-source-dirs:   app
