@@ -61,6 +61,7 @@ executable leetcode-haskell
     other-modules:
         , Prob1
         , Prob2
+        , Prob3
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
